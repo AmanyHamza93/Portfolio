@@ -26,6 +26,7 @@
             "outputPath": "dist/protfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/Portfolio/",
             "polyfills": [
               "zone.js"
             ],
@@ -34,12 +35,21 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+               {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
-              "src/styles.css"
+                "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -99,8 +109,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

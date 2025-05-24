@@ -1,0 +1,119 @@
+/* حركة الخلفية بتتحرك أكتر لكن ناعمة */
+.pink-bg {
+  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+  background-size: 600% 600%;
+  animation: gradientMove 30s ease-in-out infinite;
+  font-family: 'Quicksand', sans-serif;
+  color: #c2185b;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* صورة الملف الشخصي بتتحرك لفوق ولتحت بشكل أوضح */
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 5px solid #f06292;
+  box-shadow: 0 4px 20px rgba(240, 98, 146, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 20px rgba(240, 98, 146, 0.4);
+  }
+  50% {
+    transform: translateY(-25px) scale(1.08);
+    box-shadow: 0 10px 40px rgba(240, 98, 146, 0.6);
+  }
+}
+
+/* العنوان يظهر بنزول وانسيابية */
+h1.display-4 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #d81b60;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeSlideDown 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* النص يظهر وينزل */
+p.lead {
+  font-size: 1.2rem;
+  color: #ad1457;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeSlideUp 1.5s ease forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* زرار بينبض أكتر مع تكبير أوضح */
+.btn-pink {
+  background-color: #f06292;
+  border: none;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(240, 98, 146, 0.3);
+  animation: pulseBtn 2.5s ease-in-out infinite;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+@keyframes pulseBtn {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(240, 98, 146, 0.3);
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(240, 98, 146, 0.6);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}

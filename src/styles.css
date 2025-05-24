@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+/* خلفية متدرجة وردي ناعم */
+.pink-bg {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  color: #9d174d;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* صورة شخصية دائرية */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ec4899;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(236, 72, 153, 0.3);
+  transition: transform 0.3s ease;
+}
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(236, 72, 153, 0.6);
+}
+
+/* أزرار باللون الوردي */
+.btn-pink {
+  background-color: #ec4899;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border: none;
+  box-shadow: 0 3px 8px rgba(236, 72, 153, 0.4);
+}
+.btn-pink:hover {
+  background-color: #db2777;
+  box-shadow: 0 6px 15px rgba(219, 39, 119, 0.7);
+}
+
+/* نصوص باللون الوردي */
+.text-pink {
+  color: #db2777 !important;
+  font-weight: 600;
+}
+
+/* بطاقات المشاريع مع ظل ناعم وتأثير hover */
+.projects-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(219, 39, 119, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.projects-card:hover {
+  box-shadow: 0 8px 24px rgba(219, 39, 119, 0.3);
+  transform: translateY(-6px);
+}
+
+/* تأثير hover للروابط في Navbar */
+.nav-link {
+  color: #9d174d;
+  transition: color 0.3s ease;
+}
+.nav-link:hover, .nav-link.active {
+  color: #db2777;
+  font-weight: 700;
+}

@@ -1,0 +1,33 @@
+.sweet-navbar {
+  background: linear-gradient(90deg, #fce7f3 0%, #f9c1d1 50%, #f48fb1 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  color: #d81b60 !important; /* وردي بينكات */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin: 0 12px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  transform: translateY(-3px);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}

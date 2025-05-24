@@ -1,0 +1,27 @@
+<section class="p-5 container fade-in-section" style="background-color: #fff1f2; min-height: 100vh;">
+  <h2 class="mb-4 text-pink glowing-header" style="font-weight: bold; font-family: 'Dancing Script', cursive;">
+    💻 My Projects
+  </h2>
+
+  <!-- أزرار الفلترة -->
+  <div class="mb-4 d-flex justify-content-center gap-3 flex-wrap">
+    <button class="btn btn-outline-pink" [class.active]="selectedCategory === 'all'" (click)="selectCategory('all')">All</button>
+    <button class="btn btn-outline-pink" [class.active]="selectedCategory === 'design-patterns'" (click)="selectCategory('design-patterns')">Design Patterns</button>
+    <button class="btn btn-outline-pink" [class.active]="selectedCategory === 'razor-pages'" (click)="selectCategory('razor-pages')">Razor Pages</button>
+    <button class="btn btn-outline-pink" [class.active]="selectedCategory === 'full-stack'" (click)="selectCategory('full-stack')">Full Stack</button>
+    <button class="btn btn-outline-pink" [class.active]="selectedCategory === 'front-end'" (click)="selectCategory('front-end')">Frontend</button>
+  </div>
+
+  <!-- عرض المشاريع -->
+  <div class="row g-4">
+    <div class="col-md-6 fade-up delay-{{ i }}" *ngFor="let project of filteredProjects; let i = index">
+      <div class="projects-card p-4 rounded-4 shadow-sm"
+        style="background-color: #fff; border-left: 5px solid #ec407a; transition: transform 0.3s ease;">
+        <h5 class="fw-bold">🏥 {{ project.title }}</h5>
+        <p>{{ project.description }}</p>
+        <p class="text-muted">Tech: {{ project.tech }}</p>
+        <a [href]="project.github" target="_blank" class="text-decoration-none text-pink">🔗 View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>

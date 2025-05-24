@@ -1,0 +1,49 @@
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.8s;
+    }
+
+    .glow-title {
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #f8bbd0;
+      }
+
+      to {
+        text-shadow: 0 0 15px #ec407a, 0 0 25px #ec407a;
+      }
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #ec407a77;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(220, 20, 120, 0.15);
+    }
